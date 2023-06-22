@@ -1,0 +1,54 @@
+/* scrollbar desing */
+.message-body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+  border: solid 0px transparent;
+}
+.message-body::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+.message-body::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #555;
+}
+
+/* 
+ * sidebar scroll design
+ */
+
+.scroll-sidebar {
+  overflow: auto !important;
+}
+.scroll-sidebar::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+.scroll-sidebar::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+}
+.scroll-sidebar::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #555;
+}
+
+/* 
+ * html scrollbar
+ */
+
+html::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+html::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #555;
+}
