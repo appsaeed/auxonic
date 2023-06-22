@@ -4,7 +4,9 @@ export function jqueryMenu() {
   const url = window.location + "";
   const path = url.replace(settings.url, "");
   const element = $("ul#sidebarnav a").filter(function () {
-    return this.href === url || this.href === path; // || url.href.indexOf(this.href) === 0;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const currentHref: any = this.getAttribute("href");
+    return currentHref === url || currentHref === path; // || url.href.indexOf(this.href) === 0;
   });
 
   element.parentsUntil(".sidebar-nav").each(function () {
