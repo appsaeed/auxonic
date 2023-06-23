@@ -2,12 +2,10 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { DotProgress } from "../../components/spinner/Spinner";
-import { useAuth } from "../../context/AuthContext";
 import { usePreference } from "../../context/PreferenceContext";
 import Content from "../layout/Content";
 
 export default function Iploockup() {
-  const auth = useAuth();
   const preference = usePreference();
   const [ip, setIp] = useState("8.8.8.8");
   const [error, setError] = useState<string | null>(null);
