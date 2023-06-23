@@ -1,11 +1,32 @@
 import { useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  HashRouter,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
+import settings from "./app/settings";
 import { useAuth } from "./context/AuthContext";
 import menusList from "./menus";
 import Login from "./views/auth/Login";
 import Nopage from "./views/dashboard/Nopage";
 import Headers from "./views/layout/headers/Headers";
 import Sidebar from "./views/layout/menus/Sidebar";
+
+export const RouterProvidor = ({
+  basename,
+  children,
+}: {
+  basename?: string | undefined;
+  children: React.ReactNode;
+}) => {
+  if (import.meta.env.DEV) {
+    return <BrowserRouter basename={basename}>{children}</BrowserRouter>;
+  } else {
+    return <HashRouter basename={basename}>{children}</HashRouter>;
+  }
+};
 
 export function Navigator() {
   const auth = useAuth();
@@ -27,16 +48,18 @@ export function Navigator() {
 
 export default function Router() {
   return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route>
-        <Route path="/" element={<Navigator />}>
-          {menusList.map((menu, i) => (
-            <Route path={menu.slug} element={menu.elem} key={i} />
-          ))}
+    <RouterProvidor basename={settings.basename}>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route>
+          <Route path="/" element={<Navigator />}>
+            {menusList.map((menu, i) => (
+              <Route path={menu.slug} element={menu.elem} key={i} />
+            ))}
+          </Route>
         </Route>
-      </Route>
-      <Route path="/*" element={<Nopage />} />
-    </Routes>
+        <Route path="/*" element={<Nopage />} />
+      </Routes>
+    </RouterProvidor>
   );
 }

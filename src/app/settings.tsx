@@ -1,4 +1,5 @@
 interface SettingsTypes {
+  dev: boolean;
   url: string;
   name: string;
   title: string;
@@ -13,9 +14,14 @@ interface SettingsTypes {
 import { unslash } from "../utils/url";
 import data from "./settingJson";
 
-const __url = window.location.protocol + "//" + window.location.host;
+const __url =
+  window.location.protocol + "//" + window.location.host + "/" + data.basename;
 
 const settings: SettingsTypes = {
+  /**
+   * app local
+   */
+  dev: import.meta.env.DEV || false,
   /**
    * app url
    */
@@ -59,6 +65,6 @@ const settings: SettingsTypes = {
   /**
    * app stroage name
    */
-  auth_session: import.meta.env.VITE_AUTH_SESSTION || "",
+  auth_session: import.meta.env.VITE_AUTH_SESSTION || "authSession",
 };
 export default settings;

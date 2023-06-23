@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import settings from "./app/settings";
 
 //stylesheets
 import "react-toastify/dist/ReactToastify.css";
@@ -13,7 +12,6 @@ import "./index.css";
 
 //content prodivors
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import { BrowserRouter } from "react-router-dom";
 import Router from "./Router";
 import ThemeElemet from "./ThemeElemet";
 import AuthProvider from "./context/AuthContext";
@@ -25,11 +23,9 @@ export const Index = () => {
     <Preference>
       <ThemeElemet>
         <AuthProvider>
-          <BrowserRouter basename={settings.basename}>
-            <GoogleOAuthProvider clientId={import.meta.env.VITE_G_AUTH_CLIENT}>
-              <Router />
-            </GoogleOAuthProvider>
-          </BrowserRouter>
+          <GoogleOAuthProvider clientId={import.meta.env.VITE_G_AUTH_CLIENT}>
+            <Router />
+          </GoogleOAuthProvider>
         </AuthProvider>
       </ThemeElemet>
     </Preference>
