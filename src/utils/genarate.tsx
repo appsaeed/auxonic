@@ -1,4 +1,4 @@
-import { RangeOf } from "../types/Numbers";
+import { RangeOf } from "../types/numbers";
 
 /**
  * genarate random uuid

@@ -1,4 +1,5 @@
 import menus from "../menus";
+import { ThemeType } from "../types/preferences";
 import settings from "./settings";
 
 /**
@@ -24,3 +25,12 @@ export const getTitleByPath = (pathname: string, separator = "-"): string => {
   }
   return settings.name;
 };
+
+//create  a stroe from save theme settings
+export function getThemeStroe(): ThemeType | string | null {
+  return localStorage.getItem("theme_mode");
+}
+
+export function setThemeStroe(mode: ThemeType) {
+  localStorage.setItem("theme_mode", mode);
+}

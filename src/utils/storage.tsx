@@ -1,4 +1,3 @@
-import { ThemeType } from "../api/PreferenceType";
 import settings from "../app/settings";
 
 export function setSession(name: string, data: unknown) {
@@ -31,13 +30,4 @@ export function getStorage(name: string) {
 export function removeAuthSession() {
   sessionStorage.clear();
   sessionStorage.removeItem(settings.auth_session);
-}
-
-//create  a stroe from save theme settings
-export function getThemeStroe(): ThemeType | string | null {
-  return localStorage.getItem("theme_mode");
-}
-
-export function setThemeStroe(mode: ThemeType) {
-  localStorage.setItem("theme_mode", mode);
 }
