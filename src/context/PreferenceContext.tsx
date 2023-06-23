@@ -10,11 +10,12 @@ import {
   ThemeType,
   ThemeconfigType,
 } from "../types/preferences";
+import { detectThemeSkin, getThemeStore } from "../utils/storage";
 
 //initialState
 const initialState: ThemeconfigType = {
-  theme: "dark",
-  themeSkin: "skin5",
+  theme: getThemeStore(),
+  themeSkin: detectThemeSkin(),
   boxLayout: "full",
   themeLayout: "vertical",
   sidebarType: window.screen.width < 768 ? "mini-sidebar" : "full",

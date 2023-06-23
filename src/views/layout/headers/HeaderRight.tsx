@@ -1,6 +1,7 @@
 import * as Fa from "react-feather";
 import { useAuth } from "../../../context/AuthContext";
 import { usePreference } from "../../../context/PreferenceContext";
+import { setThemeStore } from "../../../utils/storage";
 import Account from "./Account";
 import Dropdown from "./Dropdown";
 import HeaderList from "./HeaderList";
@@ -12,12 +13,12 @@ export default function HeaderRight() {
   const auth = useAuth();
   function switchTheme() {
     const theme = preference.theme === "light" ? "dark" : "light";
+    const skins = theme === "dark" ? "skin5" : "skin6";
+
+    //theme switche
     preference.switchTheme(theme);
-    if (theme === "dark") {
-      preference.setThemeSkin("skin5");
-    } else {
-      preference.setThemeSkin("skin6");
-    }
+    preference.setThemeSkin(skins);
+    setThemeStore(theme);
   }
   return (
     <>

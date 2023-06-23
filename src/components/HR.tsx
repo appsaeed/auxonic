@@ -4,6 +4,7 @@ export default function HR({ text = "or connect with more" }) {
     <>
       <hr />
       <div className="text-center">{text}</div>
+      <hr />
     </>
   );
 }

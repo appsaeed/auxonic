@@ -12,17 +12,15 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import settings from "../../app/settings";
 import FacebookLoginIframe from "../../components/FacebookLogin";
-import ForgetPssword from "../../components/ForgetPassword";
 import { FormBody } from "../../components/FormBody";
 import HR from "../../components/HR";
 import Input from "../../components/Input";
-import Remember from "../../components/Remember";
 import { useAuth } from "../../context/AuthContext";
 import { UserProps } from "../../types/auth";
 import { extartError } from "../../utils/convert";
 import Content from "./layout/Content";
 
-export default function Login() {
+export default function Signup() {
   const navigate = useNavigate();
   const auth = useAuth();
 
@@ -99,10 +97,10 @@ export default function Login() {
     <>
       <Content>
         <FormBody
-          title={`Welcome back to ${settings.name}`}
-          sub_title="Login or New Here "
-          toText="Signup"
-          redirect="/signup"
+          title={`Welcome to ${settings.name}`}
+          sub_title="Already have an account? "
+          toText="Login"
+          redirect="/login"
           onSubmit={(e) => e.preventDefault()}
         >
           <Input
@@ -126,12 +124,7 @@ export default function Login() {
             <ForgetPssword />
           </div> */}
 
-          <div className="d-flex align-items-center mb-3">
-            <Remember />
-            <ForgetPssword />
-          </div>
-
-          <div>
+          <div className={""}>
             <button type="submit" className="btn btn-primary w-100">
               Continue with email
             </button>

@@ -1,15 +1,9 @@
-import { useEffect } from "react";
-import {
-  BrowserRouter,
-  HashRouter,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import settings from "./app/settings";
-import { useAuth } from "./context/AuthContext";
 import menusList from "./menus";
+import ForgetPassword from "./views/auth/ForgetPassword";
 import Login from "./views/auth/Login";
+import Signup from "./views/auth/Signup";
 import Nopage from "./views/dashboard/Nopage";
 import Headers from "./views/layout/headers/Headers";
 import Sidebar from "./views/layout/menus/Sidebar";
@@ -29,15 +23,6 @@ export const RouterProvidor = ({
 };
 
 export function Navigator() {
-  const auth = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!auth?.user) {
-      navigate("/login");
-    }
-  }, [auth.user, navigate]);
-
   return (
     <>
       <Headers />
@@ -51,6 +36,8 @@ export default function Router() {
     <RouterProvidor basename={settings.basename}>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/forget-password" element={<ForgetPassword />} />
         <Route>
           <Route path="/" element={<Navigator />}>
             {menusList.map((menu, i) => (

@@ -13,7 +13,6 @@ type Props = FromType & {
   redirect?: string;
   toText?: string;
   children?: ReactNode;
-  prgs?: React.FormHTMLAttributes<HTMLFormElement>;
 };
 export const FormBody = ({
   title,
@@ -24,20 +23,21 @@ export const FormBody = ({
   ...prgs
 }: Props) => {
   return (
-    <div className="card-body">
+    <>
       <h2 className="text-center">
         {title || `Welcome back to  ${settings.name}`}
       </h2>
       <p className="text-muted fs-4 text-center">
-        {sub_title || "Login or New Here "}{" "}
-        <Link to={redirect || "/signup"}>{toText || "Sign Up"}</Link>
+        {<span dangerouslySetInnerHTML={{ __html: sub_title || "" }}></span> ||
+          "Login or New Here "}{" "}
+        <Link to={redirect || "/signup"}>{toText || " Sign Up"}</Link>
       </p>
       <form
         {...prgs}
-        className="form-horizontal mt-4 pt-4 needs-validation was-validated"
+        className="form-horizontal needs-validation was-validated"
       >
         {children}
       </form>
-    </div>
+    </>
   );
 };

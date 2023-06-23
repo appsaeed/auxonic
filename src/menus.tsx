@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import settings from "./app/settings";
 import IconsViews from "./views/dashboard/IconsViews";
 import Iploockup from "./views/dashboard/Iploockup";
 import RGBtohex from "./views/dashboard/RGBtohex";
@@ -47,7 +48,7 @@ const menus: MenuType = [
   },
 ];
 
-if (import.meta.env.DEV) {
+if (settings.dev) {
   menus.push({
     name: "Icons",
     icon: <i className="mdi mdi-emoticon"></i>,
