@@ -21,10 +21,10 @@ export const RouterProvidor = ({
   basename?: string | undefined;
   children: React.ReactNode;
 }) => {
-  if (import.meta.env.DEV) {
+  if (!import.meta.env.DEV) {
     return <BrowserRouter basename={basename}>{children}</BrowserRouter>;
   } else {
-    return <HashRouter basename={basename}>{children}</HashRouter>;
+    return <HashRouter>{children}</HashRouter>;
   }
 };
 
