@@ -1,59 +1,58 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useMemo, useState } from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-import { copyToClipboard } from "../../app/utils/clipboard";
 import { DotProgress } from "../../components/spinner/Spinner";
+import { copyToClipboard } from "../../utils/clipboard";
 import icons from "../data/data.json";
 import Content from "../layout/Content";
 
 export default function IconsViews() {
-  const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState<string>("");
-  const [data, setData] = useState<JSX.Element[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
+  const [data, setData] = useState<JSX.Element[] | JSX.Element>([]);
 
-  useEffect(() => {
-    setLoading(true);
-    //initer
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let timer: any = "";
+  useMemo(() => {
+    const keyword = search.toString().toLowerCase().trim();
+    if (keyword !== "" && keyword.length >= 2) {
+      setLoading(true);
 
-    //search data
-    const find = icons.data.filter((value) => value.includes(search));
+      //search data
+      const find = icons.data.filter((value) => value.includes(search));
 
-    const list: JSX.Element[] = find.map((icon, i) => {
-      return <Icon icon={icon} key={i} />;
-    });
-    //loop
-
-    //set timer
-    if (timer) clearTimeout(timer);
-    timer = setTimeout(() => {
+      const list: JSX.Element[] = find.map((icon, i) => {
+        return <Icon icon={icon} key={i} />;
+      });
       setData(list);
       setLoading(false);
-    }, 1000);
+    } else {
+      setData([]);
+    }
   }, [search]);
 
   return (
-    <Content title="">
+    <Content>
       <div className="col-md-12">
         <div className="card">
           <div className="border-bottom title-part-padding">
             <h4 className="mb-0">
-              <div className="icon-card-title d-flex px-2">
-                <input
-                  onChange={(e) => setSearch(e.target.value)}
-                  type="text"
-                  placeholder="Search icon"
-                  className="form-control w-25"
-                  value={search}
-                />
-                <span
-                  className="w-75"
+              <div className="icon-card-title row">
+                <div className="col">
+                  <input
+                    onChange={(e) => setSearch(e.target.value)}
+                    type="text"
+                    placeholder="Search icon"
+                    className="form-control"
+                    value={search}
+                  />
+                </div>
+                <div className="col"></div>
+                <div
+                  className="col"
                   style={{ textAlign: "center", lineHeight: 2 }}
                 >
                   Get many icons
-                </span>
+                </div>
               </div>
             </h4>
           </div>

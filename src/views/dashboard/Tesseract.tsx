@@ -52,37 +52,53 @@ export default function Tesseracts() {
   };
 
   return (
-    <Content title="">
+    <Content>
       <div className="col-md-8">
         <div className="card">
           <div className="border-bottom title-part-padding">
             <h4 className="mb-0">
-              <div className="d-flex">
-                <input
-                  onChange={(e) => setUrl(e.target.value)}
-                  type="url"
-                  placeholder="Enter url"
-                  className="form-control w-50 me-3"
-                />
-                <button onClick={convertImage} className="btn btn-primary w-50">
-                  Convert
-                </button>
+              <div className="row">
+                <div className="col">
+                  <input
+                    onChange={(e) => setUrl(e.target.value)}
+                    type="url"
+                    placeholder="Enter url"
+                    className="form-control"
+                  />
+                </div>
+                <div className="col">
+                  <button
+                    onClick={convertImage}
+                    className="btn btn-primary w-100"
+                  >
+                    Convert
+                  </button>
+                </div>
               </div>
-              <div className="d-flex mt-4">
-                <select
-                  className="form-select w-50 me-3"
-                  onChange={(e) => setLang(e.target.value)}
-                  defaultValue={"eng"}
-                >
-                  <option value="eng">English</option>
-                  <option value="ben">Bangla</option>
-                  <option value="hin">Hindi</option>
-                  <option value="urd">Urdu</option>
-                </select>
+              <div className="row mt-4">
+                <div className="col">
+                  <select
+                    className="form-select w-100"
+                    onChange={(e) => setLang(e.target.value)}
+                    defaultValue={"eng"}
+                  >
+                    <option value="eng">English</option>
+                    <option value="ben">Bangla</option>
+                    <option value="hin">Hindi</option>
+                    <option value="urd">Urdu</option>
+                  </select>
+                </div>
 
-                <div className="btn btn-success btn-upload  w-50">
-                  <input type="file" accept="image/*" onChange={imageTotext} />
-                  upload
+                <div className="col">
+                  <div className="btn btn-success btn-upload  w-100">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className="w-100"
+                      onChange={imageTotext}
+                    />
+                    upload
+                  </div>
                 </div>
               </div>
             </h4>

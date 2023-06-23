@@ -1,5 +1,5 @@
-import { ThemeType } from "../../api/PreferenceType";
-import settings from "../settings";
+import { ThemeType } from "../api/PreferenceType";
+import settings from "../app/settings";
 
 export function setSession(name: string, data: unknown) {
   sessionStorage.setItem(name, btoa(JSON.stringify({ data: data })));

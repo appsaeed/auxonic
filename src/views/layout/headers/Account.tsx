@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import * as Fa from "react-feather";
-import { UserProps } from "../../../api/AuthType";
-import { useAuth } from "../../../api/context/AuthContext";
+import { useAuth } from "../../../context/AuthContext";
+import { UserProps } from "../../../types/auth";
 import LoadingMenu from "./LoadingMenu";
 
 type AccountItesProps = {

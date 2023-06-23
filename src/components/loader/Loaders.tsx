@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
-import { Htmldiv } from "../../types/htmltypes";
+import { HtmldivType } from "../../types/dom";
 import css from "./css/Loader.module.css";
 
-type LoadersProps = Htmldiv & {
+type LoadersProps = HtmldivType & {
   className?: string;
   children?: ReactNode;
 };

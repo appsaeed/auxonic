@@ -10,8 +10,8 @@ interface SettingsTypes {
   auth_session: string;
 }
 
+import { unslash } from "../utils/url";
 import data from "./settingJson";
-import { unslash } from "./utils/url";
 
 const __url = window.location.protocol + "//" + window.location.host;
 

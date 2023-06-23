@@ -1,4 +1,7 @@
 import { ReactNode } from "react";
+import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
+import { findMenuNameByPath } from "../../app/functions";
 import Footer from "../../components/Footer";
 
 export function PageContent({ children }: { children: ReactNode }) {
@@ -13,11 +16,15 @@ export function PageWrapper({ children }: { children: ReactNode }) {
   return <div className="page-wrapper">{children}</div>;
 }
 
-export function PageTitle({ children = "Hello" }: { children: ReactNode }) {
+export function PageTitle({ children }: { children?: ReactNode }) {
+  const title = findMenuNameByPath(useLocation().pathname);
+  if (children) {
+    toast.success("Page Title has in content");
+  }
   return (
     <div className="page-titles pb-0">
       <div className="col-12 col-md-12 align-self-center">
-        <h3>{children}</h3>
+        <h3>{!children && title}</h3>
       </div>
     </div>
   );
@@ -27,7 +34,7 @@ export default function Content({
   title,
   children,
 }: {
-  title: string;
+  title?: string;
   children: ReactNode;
 }) {
   return (
@@ -48,10 +55,9 @@ export function CardComponent({
 }) {
   return (
     <div className="card">
-      <div className="border-bottom title-part-padding">
-        <h4 className="mb-0">{title}</h4>
-      </div>
+      <PageTitle>{title}</PageTitle>
       <div className="card-body">{children}</div>
+      <Footer />
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import { createContext, ReactNode, useContext, useState } from "react";
+import { AuthProps, AuthType, UserProps } from "../types/auth";
 import {
   getAuthType,
   getUserCooke,
   isAuthenticated,
   removeAuthCookie,
   setAuthCookie,
-} from "../../app/utils/cookies";
-import { AuthProps, AuthType, UserProps } from "../AuthType";
+} from "../utils/cookies";
 
 const AuthContext = createContext<AuthProps>({
   isLogin: false,

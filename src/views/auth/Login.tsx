@@ -7,12 +7,9 @@ import {
   useGoogleOneTapLogin,
 } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { UserProps } from "../../api/AuthType";
-import { useAuth } from "../../api/context/AuthContext";
-import { extartError } from "../../app/utils/convert";
 import FacebookLoginIframe from "../../components/FacebookLogin";
 import ForgetPssword from "../../components/ForgetPassword";
 import { FormBody } from "../../components/FormBody";
@@ -20,15 +17,14 @@ import HR from "../../components/HR";
 import Input from "../../components/Input";
 import Remember from "../../components/Remember";
 import SubmitBtn from "../../components/Submitbtn";
+import { useAuth } from "../../context/AuthContext";
+import { UserProps } from "../../types/auth";
+import { extartError } from "../../utils/convert";
 import Content from "./layout/Content";
 
 export default function Login() {
   const navigate = useNavigate();
   const auth = useAuth();
-
-  useEffect(() => {
-    console.log(auth);
-  }, [auth]);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -98,6 +94,11 @@ export default function Login() {
     background: "transparent",
     border: "none",
   };
+
+  if (auth.user) {
+    toast.info("You already have logged in a account");
+    return <></>;
+  }
 
   return (
     <>

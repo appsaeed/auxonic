@@ -35,3 +35,16 @@ export const unslash = (str: string): string => str.replace(/\/$/, "");
  * @returns string
  */
 export const adslash = (str: string): string => unslash(str).replace(/$/, "/");
+
+/**
+ * convert url to string
+ * @param url string
+ * @returns string
+ */
+export const urlToString = (url: string): string => {
+  return url
+    .toString()
+    .replace(/-/g, " ")
+    .replace(/\//g, " ")
+    .replace(/\\/g, " ");
+};

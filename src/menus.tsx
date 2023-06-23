@@ -35,7 +35,7 @@ const menus: MenuType = [
   },
   {
     name: "RGB to hex",
-    icon: <i className="fa fa-image"></i>,
+    icon: <i className="mdi mdi-invert-colors"></i>,
     slug: "rgb-to-hex",
     elem: <RGBtohex />,
   },

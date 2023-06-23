@@ -1,14 +1,17 @@
 import menus from "../../../menus";
 
 import { useEffect } from "react";
-import { Outlet } from "react-router-dom";
-import { usePreference } from "../../../api/context/PreferenceContext";
+import { Outlet, useLocation } from "react-router-dom";
 import { jqueryMenu } from "../../../app/CustomScript";
+import { getTitleByPath } from "../../../app/functions";
+import { usePreference } from "../../../context/PreferenceContext";
+import useTitle from "../../../hooks/useTitle";
 import Mainmenu from "./Mainmenu";
 import Menugap from "./Menugap";
 import Submenu from "./Submenu";
 
 export default function Sidebar() {
+  useTitle(getTitleByPath(useLocation().pathname));
   const preference = usePreference();
   useEffect(() => {
     jqueryMenu();

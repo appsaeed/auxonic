@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import { useAuth } from "./api/context/AuthContext";
+import { useAuth } from "./context/AuthContext";
 import menusList from "./menus";
 import Login from "./views/auth/Login";
 import Nopage from "./views/dashboard/Nopage";

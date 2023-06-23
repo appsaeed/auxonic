@@ -1,8 +1,8 @@
 //apps and root import
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { usePreference } from "../../api/context/PreferenceContext";
 import { DotProgress } from "../../components/spinner/Spinner";
+import { usePreference } from "../../context/PreferenceContext";
 import Content from "../layout/Content";
 
 export default function Iploockup() {
@@ -46,25 +46,26 @@ export default function Iploockup() {
   }
 
   return (
-    <Content title="Ip lockup">
+    <Content>
       <div className="col-md-8">
         <div className="card">
           <div className="border-bottom title-part-padding">
             <h4 className="mb-0">
-              <div className="icon-card-title d-flex">
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="form-control"
-                  onChange={(e) => setIp(e.target.value)}
-                  value={ip || ""}
-                />
-                <button
-                  onClick={loockupme}
-                  className="btn btn-primary mx-3 me-2 w-25"
-                >
-                  What's my ip
-                </button>
+              <div className="icon-card-title row">
+                <div className="col">
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    className="form-control"
+                    onChange={(e) => setIp(e.target.value)}
+                    value={ip || ""}
+                  />
+                </div>
+                <div className="col">
+                  <button onClick={loockupme} className="btn btn-primary w-100">
+                    What's my ip
+                  </button>
+                </div>
               </div>
             </h4>
           </div>

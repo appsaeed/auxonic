@@ -1,9 +1,9 @@
 //apps and root import
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { usePreference } from "../../api/context/PreferenceContext";
-import { extartError } from "../../app/utils/convert";
 import { DotProgress } from "../../components/spinner/Spinner";
+import { usePreference } from "../../context/PreferenceContext";
+import { extartError } from "../../utils/convert";
 import Content from "../layout/Content";
 
 export default function URLShortener() {
@@ -48,25 +48,29 @@ export default function URLShortener() {
   }
 
   return (
-    <Content title="URL Shortener">
+    <Content>
       <div className="col-md-8">
         <div className="card">
           <div className="border-bottom title-part-padding">
             <h4 className="mb-0">
-              <div className="icon-card-title d-flex">
-                <input
-                  type="url"
-                  value={url}
-                  onChange={(e) => setUrl(e.target.value)}
-                  placeholder="Your url"
-                  className="form-control"
-                />
-                <button
-                  onClick={() => generateUrl()}
-                  className="btn btn-primary mx-3 me-2 w-50"
-                >
-                  Create short
-                </button>
+              <div className="icon-card-title row">
+                <div className="col">
+                  <input
+                    type="url"
+                    value={url}
+                    onChange={(e) => setUrl(e.target.value)}
+                    placeholder="Your url"
+                    className="form-control"
+                  />
+                </div>
+                <div className="col">
+                  <button
+                    onClick={generateUrl}
+                    className="btn btn-primary w-100"
+                  >
+                    Create short url
+                  </button>
+                </div>
               </div>
             </h4>
           </div>

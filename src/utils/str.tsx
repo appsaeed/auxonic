@@ -5,6 +5,14 @@ export const firstUpper = (str: string): string =>
   str.charAt(0).toUpperCase() + str.slice(1);
 
 /**
+ *
+ * @param str
+ * @returns
+ */
+export const capitalize = (str: string): string =>
+  str.charAt(0).toUpperCase() + str.slice(1);
+
+/**
  * make string looks pretty
  */
 export const strLooks = (str: string) => {

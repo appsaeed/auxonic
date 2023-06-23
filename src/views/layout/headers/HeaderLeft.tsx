@@ -1,8 +1,14 @@
 import * as Fa from "react-feather";
+import { usePreference } from "../../../context/PreferenceContext";
 
 export default function HeaderLeft() {
+  const preference = usePreference();
   const setSidebarType = () => {
-    //
+    if (preference.sidebarType === "full") {
+      preference.setSidebarType("mini-sidebar");
+    } else {
+      preference.setSidebarType("full");
+    }
   };
 
   return (

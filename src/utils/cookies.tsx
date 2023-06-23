@@ -1,6 +1,6 @@
 import Cookies from "universal-cookie";
-import { AuthType, UserProps } from "../../api/AuthType";
-import settings from "../settings";
+import settings from "../app/settings";
+import { AuthType, UserProps } from "../types/auth";
 
 //auth cookie props
 type AuthCookiePorps = {

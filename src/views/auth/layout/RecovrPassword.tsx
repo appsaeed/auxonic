@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function RecovrPassword() {
   return (
     <div>
@@ -20,7 +18,6 @@ export default function RecovrPassword() {
                   <input
                     className="form-control form-input-bg"
                     type="email"
-                    required=""
                     placeholder="Email address"
                   />
                   <label htmlFor="tb-email">Email</label>

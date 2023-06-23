@@ -1,4 +1,4 @@
-import { AppInputType } from "../app/types/input";
+import { InputType } from "../types/dom";
 
 type InputCustomType = {
   label?: string | undefined;
@@ -11,7 +11,7 @@ type InputCustomType = {
   };
 };
 
-type Props = AppInputType & InputCustomType;
+type Props = InputType & InputCustomType;
 export default function Inputbox({
   label = undefined,
   labelClass = "",

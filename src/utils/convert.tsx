@@ -43,6 +43,7 @@ export function objectToStr(message: string | string): string {
 /**
  * extarct error from string | object | null | undefined
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function extartError(error: any): string {
   if (!error) {
     return "";
@@ -70,4 +71,38 @@ export function extartError(error: any): string {
     }
   }
   return objectToStr(removeHtml(message));
+}
+
+/**
+ * convert rgb to hex string
+ * @param red
+ * @param green
+ * @param blue
+ */
+export function rgbToHex(
+  red: number | string,
+  green: number | string,
+  blue: number | string
+) {
+  return (
+    "#" +
+    ((1 << 24) | (Number(red) << 16) | (Number(green) << 8) | Number(blue))
+      .toString(16)
+      .slice(1)
+  );
+}
+
+/**
+ * convert hex string to rgb
+ * @param hex string
+ */
+export function hexToRgb(hex: string) {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? {
+        red: parseInt(result[1], 16),
+        green: parseInt(result[2], 16),
+        blue: parseInt(result[3], 16),
+      }
+    : null;
 }

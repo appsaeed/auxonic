@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 type Props = {
   name: string;
@@ -16,6 +16,13 @@ export default function Mainmenu({
   children,
   ...rest
 }: Props) {
+  const pathname = useLocation()
+    .pathname.toString()
+    .toString()
+    .replace(/\//g, "");
+  const urlpath = url?.toString().toLowerCase().replace(/\//g, "");
+  const active = pathname === urlpath ? " active " : "";
+  const selected = pathname === urlpath ? " selected " : "";
   return (
     <>
       {children ? (
@@ -27,9 +34,9 @@ export default function Mainmenu({
           <ul className={"collapse first-level"}>{children}</ul>
         </li>
       ) : (
-        <li {...rest} className={"sidebar-item"}>
+        <li {...rest} className={`sidebar-item ${selected}`}>
           <Link
-            className="sidebar-link waves-effect waves-dark sidebar-item-link"
+            className={`sidebar-link waves-effect waves-dark sidebar-item-link ${active}`}
             to={url || "#"}
           >
             {icon} <span className="hide-menu ml-0.5">{name} </span>

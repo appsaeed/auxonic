@@ -13,12 +13,11 @@ import "./index.css";
 
 //content prodivors
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import { HashRouter } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import { BrowserRouter } from "react-router-dom";
 import Router from "./Router";
 import ThemeElemet from "./ThemeElemet";
-import AuthProvider from "./api/context/AuthContext";
-import Preference from "./api/context/PreferenceContext";
+import AuthProvider from "./context/AuthContext";
+import Preference from "./context/PreferenceContext";
 
 //main compoents for rendering context and components
 export const Index = () => {
@@ -26,12 +25,11 @@ export const Index = () => {
     <Preference>
       <ThemeElemet>
         <AuthProvider>
-          <HashRouter basename={settings.basename}>
+          <BrowserRouter basename={settings.basename}>
             <GoogleOAuthProvider clientId={import.meta.env.VITE_G_AUTH_CLIENT}>
-              <ToastContainer />
               <Router />
             </GoogleOAuthProvider>
-          </HashRouter>
+          </BrowserRouter>
         </AuthProvider>
       </ThemeElemet>
     </Preference>

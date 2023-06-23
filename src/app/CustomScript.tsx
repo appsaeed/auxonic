@@ -1,28 +1,5 @@
 import $ from "jquery";
-import settings from "./settings";
 export function jqueryMenu() {
-  const url = window.location + "";
-  const path = url.replace(settings.url, "");
-  const element = $("ul#sidebarnav a").filter(function () {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const currentHref: any = this.getAttribute("href");
-    return currentHref === url || currentHref === path; // || url.href.indexOf(this.href) === 0;
-  });
-
-  element.parentsUntil(".sidebar-nav").each(function () {
-    if ($(this).is("li") && $(this).children("a").length !== 0) {
-      $(this).children("a").addClass("active");
-      $(this).parent("ul#sidebarnav").length === 0
-        ? $(this).addClass("active")
-        : $(this).addClass("selected");
-    } else if (!$(this).is("ul") && $(this).children("a").length === 0) {
-      $(this).addClass("selected");
-    } else if ($(this).is("ul")) {
-      $(this).addClass("in");
-    }
-  });
-
-  element.addClass("active");
   $("#sidebarnav a").on("click", function () {
     if (!$(this).hasClass("active")) {
       // hide any open menus and remove all other classes

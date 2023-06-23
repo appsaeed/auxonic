@@ -1,4 +1,4 @@
-import { AppInputType } from "../app/types/input";
+import { InputType } from "../types/dom";
 
 //input fields props attributes types
 type InputCustomType = {
@@ -10,7 +10,7 @@ type InputCustomType = {
   };
 };
 
-type Props = AppInputType & InputCustomType;
+type Props = InputType & InputCustomType;
 
 //make customer input component
 export default function Input({ label, error, ...rest }: Props) {

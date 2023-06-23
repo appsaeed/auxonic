@@ -1,4 +1,5 @@
-import { usePreference } from "../../../api/context/PreferenceContext";
+import $ from "jquery";
+import { usePreference } from "../../../context/PreferenceContext";
 import HeaderLeft from "./HeaderLeft";
 import HeaderLogo from "./HeaderLogo";
 import HeaderRight from "./HeaderRight";
@@ -6,8 +7,9 @@ import HeaderRight from "./HeaderRight";
 export default function Headers() {
   const preference = usePreference();
   const navTaggle = () => {
-    const theme = preference.theme === "dark" ? "dark" : "light";
-    preference.switchTheme(theme);
+    $("#main-wrapper").attr("data-sidebartype", "mini-sidebar");
+    $("#main-wrapper").toggleClass("show-sidebar");
+    $(".nav-toggler i").toggleClass("ri-menu-2-line");
   };
   return (
     <>
@@ -20,9 +22,7 @@ export default function Headers() {
             >
               <i className="ri-close-line ri-menu-2-line fs-6"></i>
             </a>
-
             <HeaderLogo />
-
             <a
               className="topbartoggler d-block d-md-none waves-effect waves-light"
               href="#"

@@ -6,7 +6,6 @@ export default function Nopage() {
   useEffect(() => {
     document.title = `404 not found - ${settings.name}`;
   });
-
   return (
     <>
       <div className="error-box">

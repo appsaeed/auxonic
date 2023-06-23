@@ -1,6 +1,6 @@
 import * as Fa from "react-feather";
-import { useAuth } from "../../../api/context/AuthContext";
-import { usePreference } from "../../../api/context/PreferenceContext";
+import { useAuth } from "../../../context/AuthContext";
+import { usePreference } from "../../../context/PreferenceContext";
 import Account from "./Account";
 import Dropdown from "./Dropdown";
 import HeaderList from "./HeaderList";

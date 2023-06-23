@@ -1,7 +1,8 @@
 //apps and root import
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { copyToClipboard } from "../../app/utils/clipboard";
+import { copyToClipboard } from "../../utils/clipboard";
+import { rgbToHex } from "../../utils/convert";
 import Content from "../layout/Content";
 
 export default function RGBtohex() {
@@ -11,21 +12,17 @@ export default function RGBtohex() {
   const [hex, setHex] = useState<string>("");
 
   const generateUrl = () => {
-    function rgbToHex(r: number, g: number, b: number) {
-      return "#" + ((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1);
-    }
-    setHex(rgbToHex(Number(red), Number(green), Number(blue)).toUpperCase());
+    setHex(rgbToHex(red, green, blue));
   };
 
-  console.log(hex);
   return (
-    <Content title="RGB to hex">
+    <Content>
       <div className="col-md-8">
         <div className="card">
           <div className="border-bottom title-part-padding">
-            <form onSubmit={(e) => e.preventDefault()}>
-              <div className="form-group d-flex justify-content-between">
-                <div className="w-25 pe-4">
+            <form onSubmit={(e) => e.preventDefault()} className="row">
+              <div className="form-group row col-md-9">
+                <div className="col">
                   <label>Red</label>
                   <input
                     type="text"
@@ -36,7 +33,7 @@ export default function RGBtohex() {
                     onChange={(e) => setRed(e.target.value)}
                   />
                 </div>
-                <div className="w-25 pe-4">
+                <div className="col">
                   <label>Green</label>
                   <input
                     type="text"
@@ -47,7 +44,7 @@ export default function RGBtohex() {
                     onChange={(e) => setGreen(e.target.value)}
                   />
                 </div>
-                <div className="w-25 pe-4">
+                <div className="col">
                   <label>Blue</label>
                   <input
                     type="text"
@@ -58,16 +55,17 @@ export default function RGBtohex() {
                     onChange={(e) => setBlue(e.target.value)}
                   />
                 </div>
-                <div className="w-25">
-                  <div className="">Generate</div>
-                  <button
-                    type="submit"
-                    className="btn btn-primary w-100 py-1"
-                    onClick={generateUrl}
-                  >
-                    Convert to hex
-                  </button>
-                </div>
+              </div>
+
+              <div className="col-md-3">
+                <div className="mb-1">Generate</div>
+                <button
+                  type="submit"
+                  className="btn btn-primary w-100 py-1"
+                  onClick={generateUrl}
+                >
+                  Convert to hex
+                </button>
               </div>
             </form>
           </div>
@@ -85,7 +83,7 @@ export default function RGBtohex() {
                   <input
                     type="color"
                     name="color"
-                    className="form-control w-25 me-2 h-auto"
+                    className="form-control  me-2 h-auto"
                     value={hex}
                     onChange={(e) => setHex(e.target.value)}
                   />
