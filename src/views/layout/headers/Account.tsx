@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import * as Fa from "react-feather";
 import { useAuth } from "../../../context/AuthContext";
 import { UserProps } from "../../../types/auth";
-import LoadingMenu from "./LoadingMenu";
+import GuestMenu from "./GuestMenu";
 
 type AccountItesProps = {
   icon?: ReactNode;
@@ -84,9 +84,13 @@ export default function Account({ user }: AccountProps) {
   //   return <GuestMenu />;
   // }
 
-  //loading menu
+  // //loading menu
+  // if (!user) {
+  //   return <LoadingMenu />;
+  // }
+
   if (!user) {
-    return <LoadingMenu />;
+    return <GuestMenu />;
   }
 
   //return component

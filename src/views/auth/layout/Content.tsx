@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Footer from "../../../components/Footer";
 export default function Content({ children }: { children: ReactNode }) {
   return (
     <div className="row justify-content-center vh-100">
@@ -7,6 +8,7 @@ export default function Content({ children }: { children: ReactNode }) {
           <div className="card-body">{children}</div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

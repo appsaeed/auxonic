@@ -1,6 +1,7 @@
 import $ from "jquery";
 export function jqueryMenu() {
   $("#sidebarnav a").on("click", function () {
+    $(".nav-toggler i").addClass("ri-menu-2-line");
     if (!$(this).hasClass("active")) {
       // hide any open menus and remove all other classes
       $("ul", $(this).parents("ul:first")).removeClass("in");
