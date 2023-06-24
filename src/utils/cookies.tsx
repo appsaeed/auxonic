@@ -2,6 +2,8 @@ import Cookies from "universal-cookie";
 import settings from "../app/settings";
 import { AuthType, UserProps } from "../types/auth";
 
+const cookies = new Cookies();
+
 //auth cookie props
 type AuthCookiePorps = {
   authType: AuthType;
@@ -16,7 +18,6 @@ const setAuthCookie = (authType: AuthType, user: UserProps) => {
   } catch (error) {
     value = "";
   }
-  const cookies = new Cookies();
   cookies.set(settings.auth_session, value, {
     path: `${settings.basename}`,
     expires: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
@@ -26,8 +27,6 @@ const setAuthCookie = (authType: AuthType, user: UserProps) => {
 //get auth cookie and parse as json
 const getAuthCookie = () => {
   let getCookie: AuthCookiePorps;
-
-  const cookies = new Cookies();
   const authCookie = cookies.get(settings.auth_session);
   try {
     getCookie = JSON.parse(window.atob(authCookie));
@@ -69,7 +68,6 @@ export const isAuthenticated = function (): boolean {
 
 //remove auth cookie
 const removeAuthCookie = () => {
-  const cookies = new Cookies();
   cookies.remove(settings.auth_session);
 };
 

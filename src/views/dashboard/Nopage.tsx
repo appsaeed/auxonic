@@ -8,19 +8,17 @@ export default function Nopage() {
   });
   return (
     <>
-      <div className="error-box">
-        <div className="error-body text-center">
-          <h1 className="error-title text-danger">404</h1>
-          <h3 className="text-uppercase error-subtitle">PAGE NOT FOUND !</h3>
-          <p className="text-muted m-t-30 m-b-30">
-            YOU SEEM TO BE TRYING TO FIND HIS WAY HOME
+      <div className="row justify-content-center vh-100">
+        <div className="col-md-4 align-self-center">
+          <h1 className="text-center mb-4">404 not found</h1>
+          <p className="text-muted mb-4 text-center">
+            You see to be trying to find his way home
           </p>
-          <Link
-            to={"/"}
-            className="btn btn-danger btn-rounded waves-effect waves-light m-b-40 text-white"
-          >
-            Back to home
-          </Link>
+          <div className="d-flex justify-content-center my-4">
+            <Link to={"/"} type="button" className="btn btn-primary w-50">
+              Go back to Home
+            </Link>
+          </div>
         </div>
       </div>
     </>

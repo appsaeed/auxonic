@@ -11,7 +11,11 @@ type Props = React.DetailedHTMLProps<
 > &
   Custom;
 
-export default function HeaderList({ className, children, ...rest }: Props) {
+export default function HeaderList({
+  className = "",
+  children,
+  ...rest
+}: Props) {
   return (
     <li className="nav-item" {...rest}>
       <a className={"nav-link " + className}>{children}</a>

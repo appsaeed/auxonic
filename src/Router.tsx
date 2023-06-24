@@ -18,7 +18,7 @@ export function Navigator() {
 }
 
 export default function Router() {
-  const basename = settings.dev ? "ftools" : settings.basename;
+  const basename = settings.dev ? "" : settings.basename;
   return (
     <BrowserRouter basename={basename}>
       <Routes>

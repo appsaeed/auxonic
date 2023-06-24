@@ -1,4 +1,5 @@
 import * as Fa from "react-feather";
+import settings from "../../../app/settings";
 import { useAuth } from "../../../context/AuthContext";
 import { usePreference } from "../../../context/PreferenceContext";
 import { setThemeStore } from "../../../utils/storage";
@@ -27,7 +28,7 @@ export default function HeaderRight() {
           {preference.theme === "dark" ? <Fa.Moon /> : <Fa.Sun />}
         </HeaderList>
 
-        {import.meta.env.DEV && (
+        {settings.dev && (
           <>
             <Dropdown title="Messages" count={6} icon={<Fa.MessageCircle />}>
               <Message image={1} status={"online"} />
