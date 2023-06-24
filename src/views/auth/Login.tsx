@@ -18,11 +18,13 @@ import HR from "../../components/HR";
 import Input from "../../components/Input";
 import Remember from "../../components/Remember";
 import { useAuth } from "../../context/AuthContext";
+import useTitle from "../../hooks/useTitle";
 import { UserProps } from "../../types/auth";
 import { extartError } from "../../utils/convert";
 import Content from "./layout/Content";
 
 export default function Login() {
+  useTitle("Login", true);
   const navigate = useNavigate();
   const auth = useAuth();
 

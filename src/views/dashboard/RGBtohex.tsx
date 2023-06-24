@@ -21,7 +21,7 @@ export default function RGBtohex() {
         <div className="card">
           <div className="border-bottom title-part-padding">
             <form onSubmit={(e) => e.preventDefault()} className="row">
-              <div className="form-group row col-md-9">
+              <div className="form-group row col-md-9 m-0 p-0">
                 <div className="col">
                   <label>Red</label>
                   <input

@@ -18,8 +18,9 @@ export function Navigator() {
 }
 
 export default function Router() {
+  const basename = settings.dev ? "ftools" : settings.basename;
   return (
-    <BrowserRouter basename={settings.basename}>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

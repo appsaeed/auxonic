@@ -2,10 +2,12 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import { FormBody } from "../../components/FormBody";
 import Input from "../../components/Input";
+import useTitle from "../../hooks/useTitle";
 import { extartError } from "../../utils/convert";
 import Content from "./layout/Content";
 
 export default function ForgetPassword() {
+  useTitle("Forget Password", true);
   const [email, setEmail] = useState("");
   const [mailError] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

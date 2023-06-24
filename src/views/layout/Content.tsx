@@ -41,19 +41,3 @@ export default function Content({
     </PageWrapper>
   );
 }
-
-export function CardComponent({
-  title,
-  children,
-}: {
-  title: string;
-  children: ReactNode;
-}) {
-  return (
-    <div className="card">
-      <PageTitle>{title}</PageTitle>
-      <div className="card-body">{children}</div>
-      <Footer />
-    </div>
-  );
-}

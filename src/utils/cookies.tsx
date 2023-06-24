@@ -18,7 +18,7 @@ const setAuthCookie = (authType: AuthType, user: UserProps) => {
   }
   const cookies = new Cookies();
   cookies.set(settings.auth_session, value, {
-    path: settings.basename,
+    path: `${settings.basename}`,
     expires: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
   });
 };

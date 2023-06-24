@@ -54,7 +54,7 @@ export default function URLShortener() {
           <div className="border-bottom title-part-padding">
             <h4 className="mb-0">
               <div className="icon-card-title row">
-                <div className="col">
+                <div className="col-md-6 mb-3 mb-md-0">
                   <input
                     type="url"
                     value={url}
@@ -63,7 +63,7 @@ export default function URLShortener() {
                     className="form-control"
                   />
                 </div>
-                <div className="col">
+                <div className="col-md-6">
                   <button
                     onClick={generateUrl}
                     className="btn btn-primary w-100"

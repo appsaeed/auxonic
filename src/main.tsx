@@ -7,7 +7,6 @@ import "./assets/css/body.css";
 import "./assets/css/bootstrap.css";
 import "./assets/css/custom-fonts.css";
 import "./assets/css/scrollbar.css";
-import "./assets/css/style.min.css";
 import "./index.css";
 
 //content prodivors

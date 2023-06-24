@@ -16,11 +16,13 @@ import { FormBody } from "../../components/FormBody";
 import HR from "../../components/HR";
 import Input from "../../components/Input";
 import { useAuth } from "../../context/AuthContext";
+import useTitle from "../../hooks/useTitle";
 import { UserProps } from "../../types/auth";
 import { extartError } from "../../utils/convert";
 import Content from "./layout/Content";
 
 export default function Signup() {
+  useTitle("Signup", true);
   const navigate = useNavigate();
   const auth = useAuth();
 
