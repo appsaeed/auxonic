@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import settings from "./app/settings";
 import menusList from "./menus";
 import ForgetPassword from "./views/auth/ForgetPassword";
@@ -7,20 +7,6 @@ import Signup from "./views/auth/Signup";
 import Nopage from "./views/dashboard/Nopage";
 import Headers from "./views/layout/headers/Headers";
 import Sidebar from "./views/layout/menus/Sidebar";
-
-export const RouterProvidor = ({
-  basename,
-  children,
-}: {
-  basename?: string | undefined;
-  children: React.ReactNode;
-}) => {
-  if (import.meta.env.DEV) {
-    return <BrowserRouter basename={basename}>{children}</BrowserRouter>;
-  } else {
-    return <HashRouter>{children}</HashRouter>;
-  }
-};
 
 export function Navigator() {
   return (
@@ -33,7 +19,7 @@ export function Navigator() {
 
 export default function Router() {
   return (
-    <RouterProvidor basename={settings.basename}>
+    <BrowserRouter basename={settings.basename}>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
@@ -47,6 +33,6 @@ export default function Router() {
         </Route>
         <Route path="/*" element={<Nopage />} />
       </Routes>
-    </RouterProvidor>
+    </BrowserRouter>
   );
 }
