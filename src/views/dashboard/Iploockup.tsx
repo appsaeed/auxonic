@@ -78,9 +78,9 @@ export default function Iploockup() {
                 >
                   <tbody>
                     {ip_data.map((item, key) => (
-                      <tr key={key}>
-                        <th scope="row">{item.name}</th>
-                        <td>{item.value}</td>
+                      <tr className="d-flex" key={key}>
+                        <th className="col">{item.name}</th>
+                        <td className="col">{item.value}</td>
                       </tr>
                     ))}
                   </tbody>

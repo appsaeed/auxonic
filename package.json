@@ -13,7 +13,6 @@
   "dependencies": {
     "@greatsumini/react-facebook-login": "^3.3.3",
     "@react-oauth/google": "^0.11.0",
-    "axios": "^1.4.0",
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -39,7 +38,9 @@
     "jquery": "^3.7.0",
     "react-device-detect": "^2.2.3",
     "react-feather": "^2.0.10",
+    "rollup-plugin-copy": "^3.4.0",
     "typescript": "^5.0.2",
-    "vite": "^4.3.9"
+    "vite": "^4.3.9",
+    "vite-plugin-pwa": "^0.16.4"
   }
 }
