@@ -18,9 +18,9 @@ export function Navigator() {
 }
 
 export default function Router() {
-  const basename = settings.dev ? "" : settings.basename;
+  // const basename = settings.dev ? "" : settings.basename;
   return (
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename={settings.basename}>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

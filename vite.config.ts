@@ -76,7 +76,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  // base: '/ftools/',
+  base: "/ftools/",
   // build: {
   //   rollupOptions: {
   //     input: {
