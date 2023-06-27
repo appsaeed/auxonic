@@ -36,7 +36,7 @@ export default function ThemeElemet({ children }: { children: ReactNode }) {
       }
     }
     document.addEventListener("DOMContentLoaded", () => {
-      register("sw.js");
+      register("/ftools/sw.js");
     });
   }, []);
   return (
