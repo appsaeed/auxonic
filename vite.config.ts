@@ -1,6 +1,5 @@
 import react from "@vitejs/plugin-react-swc";
 import { resolve } from "path";
-import copy from "rollup-plugin-copy";
 import { defineConfig } from "vite";
 import { VitePWAOptions } from "vite-plugin-pwa";
 
@@ -61,29 +60,18 @@ const pwaConfig: Partial<VitePWAOptions> = {
 export default defineConfig({
   plugins: [
     react(),
-    copy({
-      targets: [
-        {
-          src: resolve(__dirname, "index.html"),
-          dest: resolve(__dirname, "dist"),
-          rename: "404.html",
-        },
-      ],
-      hook: "writeBundle", // notice here
-    }),
     // VitePWA(pwaConfig),
   ],
   server: {
     port: 3000,
   },
   base: "/ftools/",
-  // build: {
-  //   rollupOptions: {
-  //     input: {
-  //       main: resolve(__dirname, "index.html"),
-  //       manifest: resolve(__dirname, "manifest.webmanifest"),
-  //       // 404: resolve(__dirname, "404.html"),
-  //     },
-  //   },
-  // },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        404: resolve(__dirname, "404.html"),
+      },
+    },
+  },
 });
