@@ -16,6 +16,21 @@ import ThemeElemet from "./ThemeElemet";
 import AuthProvider from "./context/AuthContext";
 import Preference from "./context/PreferenceContext";
 
+import { registerSW } from "virtual:pwa-register";
+
+registerSW({
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  onNeedRefresh() {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  onOfflineReady() {},
+});
+
+// if (import.meta.env.DEV && "serviceWorker" in navigator) {
+//   window.addEventListener("load", () => {
+//     navigator.serviceWorker.register("./sw.js", { scope: "./" });
+//   });
+// }
+
 //main compoents for rendering context and components
 export const Index = () => {
   return (

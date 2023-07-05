@@ -11,32 +11,33 @@ export default function ThemeElemet({ children }: { children: ReactNode }) {
 
   //sw register
   useEffect(() => {
-    async function register(filename: string) {
-      if ("serviceWorker" in navigator) {
-        console.log("serviceWorker");
-        //create cache link
-        const localArray: (string | null)[] = [];
-        document.querySelectorAll("[src],[href]").forEach(function (node) {
-          if (node.getAttribute("src")) {
-            localArray.push(node.getAttribute("src"));
-          } else if (node.getAttribute("href")) {
-            localArray.push(node.getAttribute("href"));
-          }
-        });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    // async function register(filename: string) {
+    //   if ("serviceWorker" in navigator) {
+    //     console.log("serviceWorker");
+    //     //create cache link
+    //     const localArray: (string | null)[] = [];
+    //     document.querySelectorAll("[src],[href]").forEach(function (node) {
+    //       if (node.getAttribute("src")) {
+    //         localArray.push(node.getAttribute("src"));
+    //       } else if (node.getAttribute("href")) {
+    //         localArray.push(node.getAttribute("href"));
+    //       }
+    //     });
 
-        //process to register serviceWorker
-        navigator.serviceWorker.ready.then((registration) => {
-          if (registration.active) registration.active.postMessage(localArray);
-        });
-        try {
-          await navigator.serviceWorker.register(filename);
-        } catch (e) {
-          console.log(`SW registration failed: ${e}`);
-        }
-      }
-    }
+    //     //process to register serviceWorker
+    //     navigator.serviceWorker.ready.then((registration) => {
+    //       if (registration.active) registration.active.postMessage(localArray);
+    //     });
+    //     try {
+    //       await navigator.serviceWorker.register(filename);
+    //     } catch (e) {
+    //       console.log(`SW registration failed: ${e}`);
+    //     }
+    //   }
+    // }
     document.addEventListener("DOMContentLoaded", () => {
-      register("/ftools/sw.js");
+      // register("/ftools/sw.js");
     });
   }, []);
   return (
