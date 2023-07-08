@@ -1,8 +1,9 @@
-import { ReactNode, useEffect } from "react";
+import { useEffect } from "preact/hooks";
 import { ToastContainer } from "react-toastify";
 import { usePreference } from "./context/PreferenceContext";
+import { Children } from "./types/global";
 
-export default function ThemeElemet({ children }: { children: ReactNode }) {
+export default function ThemeElemet({ children }: { children: Children }) {
   const preference = usePreference();
   useEffect(() => {
     document.body.setAttribute("data-theme", preference.theme);

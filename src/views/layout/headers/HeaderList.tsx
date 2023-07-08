@@ -1,16 +1,10 @@
-import { ReactNode } from "react";
-type Custom = {
+import { HtmlLitype } from "../../../types/dom";
+import { Children } from "../../../types/global";
+
+interface Props extends HtmlLitype {
   className?: string;
-  children?: ReactNode;
-  rest?: React.LiHTMLAttributes<HTMLLIElement>;
-};
-
-type Props = React.DetailedHTMLProps<
-  React.LiHTMLAttributes<HTMLLIElement>,
-  HTMLLIElement
-> &
-  Custom;
-
+  children?: Children;
+}
 export default function HeaderList({
   className = "",
   children,

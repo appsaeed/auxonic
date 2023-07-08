@@ -6,7 +6,7 @@ type InputCustomType = {
   label: string;
   refs?: unknown;
   rest?: {
-    [x: string]: React.InputHTMLAttributes<HTMLInputElement>;
+    [x: string]: never;
   };
 };
 

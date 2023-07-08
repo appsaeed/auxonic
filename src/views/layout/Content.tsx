@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import { findMenuNameByPath } from "../../app/functions";
 import Footer from "../../components/Footer";
+import { Children } from "../../types/global";
 
-export function PageContent({ children }: { children: ReactNode }) {
+export function PageContent({ children }: { children: Children }) {
   return (
     <div className="container-fluid">
       <div className="row">{children}</div>
@@ -11,11 +11,11 @@ export function PageContent({ children }: { children: ReactNode }) {
   );
 }
 
-export function PageWrapper({ children }: { children: ReactNode }) {
+export function PageWrapper({ children }: { children: Children }) {
   return <div className="page-wrapper">{children}</div>;
 }
 
-export function PageTitle({ children }: { children?: ReactNode }) {
+export function PageTitle({ children }: { children?: Children }) {
   const title = findMenuNameByPath(useLocation().pathname);
   return (
     <div className="page-titles pb-0">
@@ -31,7 +31,7 @@ export default function Content({
   children,
 }: {
   title?: string;
-  children: ReactNode;
+  children: Children;
 }) {
   return (
     <PageWrapper>

@@ -1,5 +1,5 @@
 //apps and root import
-import { useState } from "react";
+import { useState } from "preact/hooks";
 import { toast } from "react-toastify";
 import { DotProgress } from "../../components/spinner/Spinner";
 import { usePreference } from "../../context/PreferenceContext";
@@ -58,7 +58,7 @@ export default function URLShortener() {
                   <input
                     type="url"
                     value={url}
-                    onChange={(e) => setUrl(e.target.value)}
+                    onChange={(e) => setUrl(e.currentTarget.value)}
                     placeholder="Your url"
                     className="form-control"
                   />

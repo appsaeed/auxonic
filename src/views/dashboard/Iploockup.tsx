@@ -1,5 +1,5 @@
 //apps and root import
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "preact/hooks";
 import { toast } from "react-toastify";
 import { DotProgress } from "../../components/spinner/Spinner";
 import { usePreference } from "../../context/PreferenceContext";
@@ -7,10 +7,10 @@ import Content from "../layout/Content";
 
 export default function Iploockup() {
   const preference = usePreference();
-  const [ip, setIp] = useState("8.8.8.8");
+  const [ip, setIp] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [ip_data, set_ip_data] = useState<any[] | null>(null);
+  const [ip_data, set_ip_data] = useState<any[] | null>([]);
 
   const loockupme = () => {
     set_ip_data(null);
@@ -56,7 +56,7 @@ export default function Iploockup() {
                     type="text"
                     placeholder="Search"
                     className="form-control"
-                    onChange={(e) => setIp(e.target.value)}
+                    onChange={(e) => setIp(e.currentTarget.value)}
                     value={ip || ""}
                   />
                 </div>

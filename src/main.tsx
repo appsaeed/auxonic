@@ -1,5 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { render } from "preact";
 
 //stylesheets
 import "react-toastify/dist/ReactToastify.css";
@@ -53,4 +52,4 @@ const rootdiv = import.meta.env.VITE_ROOTDIV || "%VITE_ROOTDIV%";
 //main element selector
 const element = document.getElementById(rootdiv) as HTMLElement;
 //component renderer
-ReactDOM.createRoot(element).render(<React.StrictMode children={<Index />} />);
+render(<Index />, element);

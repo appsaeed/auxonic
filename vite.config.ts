@@ -1,9 +1,9 @@
-import react from "@vitejs/plugin-react-swc";
+import preact from "@preact/preset-vite";
 import { readFile, writeFile } from "fs/promises";
 import { resolve } from "path";
 import { defineConfig, loadEnv } from "vite";
 import { VitePWA, VitePWAOptions } from "vite-plugin-pwa";
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+
 const env = Object.assign(process.env, loadEnv("mock", process.cwd(), ""));
 
 //basepath
@@ -18,10 +18,10 @@ const pwaConfig: Partial<VitePWAOptions> = {
     sourcemap: true,
   },
   manifest: {
-    name: "FTools for web applications",
-    short_name: "FTools",
+    name: env.VITE_DESCRIPTION || "Ftools",
+    short_name: env.VITE_NAME || "FTools",
     theme_color: "#1976d2",
-    background_color: "#fafafa",
+    background_color: env.VITE_THTEM_COLOR || "#fafafa",
     display: "standalone",
     scope: "./",
     start_url: "./",
@@ -80,25 +80,25 @@ const pwaConfig: Partial<VitePWAOptions> = {
         type: "image/png",
         purpose: "maskable any",
       },
-      // {
-      //   src: "/icons/android-chrome-192x192.png",
-      //   sizes: "192x192",
-      //   type: "image/png",
-      // },
-      // {
-      //   src: "/icons/android-chrome-512x512.png",
-      //   sizes: "512x512",
-      //   type: "image/png",
-      // },
+      {
+        src: iconpath + "/icons/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: iconpath + "/icons/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
     ],
   },
 };
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), VitePWA(pwaConfig)],
+  plugins: [preact(), VitePWA(pwaConfig)],
   server: {
-    port: 3030,
+    port: Number(env.VITE_PORT) || 3000,
   },
   base: basepath,
   build: {

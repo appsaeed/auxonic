@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
+import { Children } from "../../../types/global";
 
 type Props = {
   name: string;
-  icon: ReactNode;
-  rest?: React.LiHTMLAttributes<HTMLLIElement>;
+  icon: Children;
 };
 
 export default function Menugap({ name, icon, ...rest }: Props) {

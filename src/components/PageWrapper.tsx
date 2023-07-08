@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
+import { Children } from "../types/global";
 
-export function PageWrapper({ children }: { children: ReactNode[] }) {
+export function PageWrapper({ children }: { children: Children[] }) {
   return <div className="page-wrapper">{children}</div>;
 }
 
-export function PageTitle({ children }: { children: ReactNode }) {
+export function PageTitle({ children }: { children: Children }) {
   return (
     <div className="page-titles">
       <div className="row">

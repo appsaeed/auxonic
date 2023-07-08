@@ -7,7 +7,7 @@ import {
   useGoogleOneTapLogin,
 } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
-import { useState } from "react";
+import { useState } from "preact/hooks";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import settings from "../../app/settings";
@@ -111,7 +111,7 @@ export default function Login() {
             type="email"
             label="Your Email"
             error="Enter a valid email address"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.currentTarget.value)}
             value={email}
             required={mailError}
           />

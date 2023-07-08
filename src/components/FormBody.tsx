@@ -1,18 +1,14 @@
-import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import settings from "../app/settings";
+import { HtmlFormType } from "../types/dom";
+import { Children } from "../types/global";
 
-//form body props
-type FromType = React.DetailedHTMLProps<
-  React.FormHTMLAttributes<HTMLFormElement>,
-  HTMLFormElement
->;
-type Props = FromType & {
+type Props = HtmlFormType & {
   title?: string;
   sub_title?: string;
   redirect?: string;
   toText?: string;
-  children?: ReactNode;
+  children?: Children;
 };
 export const FormBody = ({
   title,

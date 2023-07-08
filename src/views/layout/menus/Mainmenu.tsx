@@ -1,12 +1,11 @@
-import { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Children } from "../../../types/global";
 
 type Props = {
   name: string;
-  icon: ReactNode;
+  icon: Children;
   url: string | undefined;
-  children?: ReactNode;
-  rest?: React.LiHTMLAttributes<HTMLLIElement>;
+  children?: Children;
 };
 
 export default function Mainmenu({

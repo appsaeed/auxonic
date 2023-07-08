@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import { Children } from "../../../types/global";
 
 type Props = {
   image?: string;
-  icon?: ReactNode;
+  icon?: Children;
 };
 
 export default function Notification({ image, icon }: Props) {

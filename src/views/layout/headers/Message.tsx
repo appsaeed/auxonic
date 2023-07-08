@@ -1,12 +1,14 @@
-type Props = {
+import { HtmlAnchorType } from "../../../types/dom";
+
+interface Props extends HtmlAnchorType {
   name?: string;
   image?: string | number;
   text?: string;
   status?: string;
   time?: string;
-  rest?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
-};
+}
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function Message({ image, status, time, ...rest }: Props) {
   return (
     <a

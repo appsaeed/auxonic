@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
+import { Children } from "../../types/global";
 
 export function CardWrapper({
   className = "col-md-12",
   children,
 }: {
   className?: string;
-  children: ReactNode;
+  children: Children;
 }) {
   return (
     <div className={className}>
@@ -14,10 +14,10 @@ export function CardWrapper({
   );
 }
 
-export function Cardbody({ children }: { children: ReactNode }) {
+export function Cardbody({ children }: { children: Children }) {
   return <div className="card-body px-2">{children}</div>;
 }
 
-export function CardTitle({ children }: { children: ReactNode }) {
+export function CardTitle({ children }: { children: Children }) {
   return <div className="border-bottom title-part-padding">{children}</div>;
 }

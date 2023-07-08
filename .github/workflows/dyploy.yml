@@ -3,7 +3,7 @@ name: FTooler deploy
 on:
   push:
     branches:
-      - v2
+      - v3.0
 
 jobs:
   build:
