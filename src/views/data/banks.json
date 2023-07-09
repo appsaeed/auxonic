@@ -1,0 +1,512 @@
+[
+  {
+    "value": "AB Bank Ltd.",
+    "label": "ABL",
+    "Type": "Private Commercial Banks",
+    "Founded": "April 2, 1982",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "abbl.com"
+  },
+  {
+    "value": "Agrani Bank",
+    "label": "ABL",
+    "Type": "State Owned Commercial Banks",
+    "Founded": "26 March 1972",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.agranibank.org"
+  },
+  {
+    "value": "Al-Arafah Islami Bank Ltd.",
+    "label": "AAIBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1995",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "al-arafahbank.com"
+  },
+  {
+    "value": "Ansar VDP Unnayan Bank",
+    "label": "AVUB",
+    "Type": "Non-scheduled banks",
+    "Founded": "Dhaka, Bangladesh",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "ansarvdpbank.gov.bd"
+  },
+  {
+    "value": "BASIC Bank",
+    "label": "BBL",
+    "Type": "State Owned Commercial Banks",
+    "Founded": "",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "http://www.basicbanklimited.com/"
+  },
+  {
+    "value": "BRAC Bank Ltd.",
+    "label": "BBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "4 July 2001",
+    "Headquarters": "220/B Gulshan Tejgaon Link Road, Dhaka 1208 Dhaka, Bangladesh",
+    "Website": "www.bracbank.com"
+  },
+  {
+    "value": "Bangladesh Commerce Bank Ltd.",
+    "label": "BCBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "Dhaka, Bangladesh",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": ""
+  },
+  {
+    "value": "Bangladesh Development Bank",
+    "label": "BDB",
+    "Type": "State Owned Commercial Banks",
+    "Founded": "16 November 2009",
+    "Website": "www.bdbl.com.bd"
+  },
+  {
+    "value": "Bangladesh Krishi Bank",
+    "label": "BKB",
+    "Type": "Specialized Banks",
+    "Founded": "Dhaka, Bangladesh",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "http://www.krishibank.org.bd/"
+  },
+  {
+    "value": "Bank Al-Falah",
+    "label": "BAFL",
+    "Formerly": "Habib Credit & Exchange Bank Limited",
+    "Type": "Foreign Commercial Banks",
+    "Founded": "June 21, 1997",
+    "Headquarters": "Karachi, Pakistan",
+    "Owner": "Abu Dhabi Group",
+    "Website": "www.bankalfalah.com"
+  },
+  {
+    "value": "Bank Asia Ltd.",
+    "label": "BAL",
+    "Type": "Private Commercial Banks",
+    "Founded": "27 November 1999",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "Bank Asia Limited"
+  },
+  {
+    "value": "CITI Bank NA",
+    "label": "CITIBNA",
+    "Type": "Foreign Commercial Banks",
+    "Founded": "June 16, 1812",
+    "Headquarters": "New York City, New York",
+    "Website": "citi.com"
+  },
+  {
+    "value": "Commercial Bank of Ceylon",
+    "label": "CBOC",
+    "Type": "Foreign Commercial Banks",
+    "Founded": "1920",
+    "Headquarters": "Colombo, Sri Lanka",
+    "Owner": "Citigroup (13.15%)Employees' Provident Fund (7.78%)Deutsche Bank (5.52%)",
+    "Website": ""
+  },
+  {
+    "value": "Community Bank Bangladesh Limited",
+    "label": "CBBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "2019",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.communitybankbd.com"
+  },
+  {
+    "value": "Dhaka Bank Ltd.",
+    "label": "DBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "July 5, 1995",
+    "Founder": "Mirza Abbas",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "dhakabankltd.com"
+  },
+  {
+    "value": "Dutch Bangla Bank Ltd.",
+    "label": "DBBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1995",
+    "Headquarters": "Motijheel, Dhaka, Bangladesh",
+    "Website": "dutchbanglabank.com"
+  },
+  {
+    "value": "EXIM Bank Ltd.",
+    "label": "EXIM",
+    "Type": "Private Commercial Banks",
+    "Founded": "3 August 1999",
+    "Founder": "Late Mr. Shahjahan Kabir",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.eximbankbd.com"
+  },
+  {
+    "value": "Eastern Bank Ltd.",
+    "label": "EBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "August 8, 1992",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "ebl.com.bd"
+  },
+  {
+    "value": "First Security Islami Bank Ltd.",
+    "label": "FSIBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "25 October 1999",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "fsiblbd.com"
+  },
+  {
+    "value": "Global Islamic Bank Ltd.",
+    "label": "GIBL",
+    "Type": "Private Commercial Banks",
+    "Website": "https://www.globalislamibankbd.com/"
+  },
+  {
+    "value": "Grameen Bank",
+    "label": "GB",
+    "Type": "Non-scheduled banks",
+    "Founded": "October 1983 (1983-10)",
+    "Founder": "Muhammad Yunus",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "grameen.com"
+  },
+  {
+    "value": "HSBC",
+    "label": "HSBC",
+    "Type": "Foreign Commercial Banks",
+    "Founded": "3 March 1865",
+    "Founder": "Sir Thomas Sutherland",
+    "Headquarters": "HSBC Main Building, Central, Hong Kong",
+    "Website": "www.hsbc.com.hk"
+  },
+  {
+    "value": "Habib Bank Ltd.",
+    "label": "HBL",
+    "Type": "Foreign Commercial Banks",
+    "Founded": "25 August 1940",
+    "Founder": "Mohammed Ali Habib[2]  Dawood Habib[2]",
+    "Headquarters": "Habib Bank Plaza, Karachi, Pakistan",
+    "Website": "www.hbl.com"
+  },
+  {
+    "value": "ICB Islamic Bank",
+    "label": "IIBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1987",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "https://www.icbislamic-bd.com/"
+  },
+  {
+    "value": "IFIC Bank Ltd.",
+    "label": "IBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1976",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.ificbankbd.com"
+  },
+  {
+    "value": "Islami Bank Bangladesh Ltd.",
+    "label": "IBBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "13 March 1983",
+    "Headquarters": "Islami Bank Tower 40, Dilkusha C/A, Dhaka - 1000, Bangladesh",
+    "Website": "islamibankbd.com"
+  },
+  {
+    "value": "Jamuna Bank Ltd.",
+    "label": "JBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "2001",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.jamunabankbd.com"
+  },
+  {
+    "value": "Janata Bank",
+    "label": "JBL",
+    "Type": "State Owned Commercial Banks",
+    "Founded": "1971",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "http://www.jb.com.bd/"
+  },
+  {
+    "value": "Jubilee Bank",
+    "label": "JB",
+    "Type": "Non-scheduled banks",
+    "Founded": "Kushtia, Bangladesh",
+    "Headquarters": "Kushtia, Bangladesh",
+    "Website": "jubileebank.com"
+  },
+  {
+    "value": "Karmashangosthan Bank",
+    "label": "KB",
+    "Type": "Non-scheduled banks",
+    "Founded": "Dhaka, Bangladesh",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "Karmasangsthan Bank"
+  },
+  {
+    "value": "Meghna Bank Ltd.",
+    "label": "MBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "21 April 2013",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "http://www.meghnabank.com.bd"
+  },
+  {
+    "value": "Mercantile Bank Ltd.",
+    "label": "MBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1999",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.mblbd.com"
+  },
+  {
+    "value": "Midland Bank Ltd.",
+    "label": "MBL",
+    "Founded": "June 20, 2013",
+    "Headquarters": "Gulshan Avenue, Gulshan-2, Dhaka",
+    "Type": "Private Commercial Banks",
+    "Website": "https://www.midlandbankbd.net/"
+  },
+  {
+    "value": "Modhumoti Bank Ltd.",
+    "label": "MBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1999",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "https://www.modhumotibankltd.com/"
+  },
+  {
+    "value": "Mutual Trust Bank Ltd.",
+    "label": "MTBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "mutualtrustbank.com"
+  },
+  {
+    "value": "NCC Bank Ltd.",
+    "label": "NCCBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1985",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": ""
+  },
+  {
+    "value": "NRB Bank Ltd.",
+    "label": "NBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "2013",
+    "Founder": "Iqbal Ahmed (OBE)",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.nrbbankbd.com"
+  },
+  {
+    "value": "NRB Commercial Bank Ltd.",
+    "label": "NCBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "02 April 2013",
+    "Website": "https://www.nrbcommercialbank.com/"
+  },
+  {
+    "value": "National Bank Ltd.",
+    "label": "NBL",
+    "Type": "Private Commercial Banks",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.nblbd.com"
+  },
+  {
+    "value": "National Bank of Pakistan",
+    "label": "NBOP",
+    "Type": "Foreign Commercial Banks",
+    "Founded": "1949",
+    "Headquarters": "Karachi Pakistan",
+    "Owner": "State Bank of Pakistan (75.20%)",
+    "Website": "www.nbp.com.pk"
+  },
+  {
+    "value": "One Bank Ltd.",
+    "label": "OBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": ""
+  },
+  {
+    "value": "Padma Bank Ltd.",
+    "label": "PBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "2013",
+    "Headquarters": "Gulshan-1, Dhaka, Bangladesh",
+    "Website": "www.padmabankbd.com"
+  },
+  {
+    "value": "Palli Sanchay Bank",
+    "label": "PSB",
+    "Type": "Non-scheduled banks",
+    "Founded": "Dhaka, Bangladesh",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.pallisanchaybank.gov.bd"
+  },
+  {
+    "value": "Premier Bank Ltd.",
+    "label": "PBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1999",
+    "Headquarters": "42 Kemal Ataturk Avenue, Banani, Dhaka, Bangladesh",
+    "Website": "www.premierbankltd.com"
+  },
+  {
+    "value": "Prime Bank Ltd.",
+    "label": "PBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1995",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "primebank.com.bd"
+  },
+  {
+    "value": "Pubali Bank Ltd.",
+    "label": "PBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1959",
+    "Headquarters": "26 Dilkusha Commercial Area Dhaka, Bangladesh",
+    "Website": "http://www.pubalibangla.com/"
+  },
+  {
+    "value": "Rajshahi Krishi Unnayan Bank",
+    "label": "RKUB",
+    "Type": "Specialized Banks",
+    "Founded": "",
+    "Website": "http://www.rakub.org.bd/"
+  },
+  {
+    "value": "Rupali Bank",
+    "label": "RBL",
+    "Type": "State Owned Commercial Banks",
+    "Founded": "1972",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "rupalibank.org"
+  },
+  {
+    "value": "SBAC Bank Ltd.",
+    "label": "SBAC",
+    "Type": "Private Commercial Banks",
+    "Founded": "2013",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": ""
+  },
+  {
+    "value": "Shahjalal Islami Bank Ltd.",
+    "label": "SIBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "Dhaka, Bangladesh",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "sjiblbd.com"
+  },
+  {
+    "value": "Shimanto Bank Ltd.",
+    "label": "SBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "Dhaka, Bangladesh",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "http://www.shimantobank.com/"
+  },
+  {
+    "value": "Social Islami Bank Ltd.",
+    "label": "SIBL",
+    "Type": "Private Commercial Banks",
+    "Formerly": "Social Investment Bank Limited",
+    "Founded": "Dhaka, Bangladesh",
+    "Headquarters": "90/1, City Center, Motijheel, Dhaka-1000, Bangladesh",
+    "Website": "siblbd.com"
+  },
+  {
+    "value": "Sonali Bank",
+    "label": "SBL",
+    "Type": "State Owned Commercial Banks",
+    "Founded": "1972",
+    "Headquarters": "Motijheel, Dhaka, Bangladesh",
+    "Website": "http://sonalibank.com.bd"
+  },
+  {
+    "value": "Southeast Bank Ltd.",
+    "label": "SBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1995",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.southeastbank.com.bd"
+  },
+  {
+    "value": "Standard Bank Ltd.",
+    "label": "SBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "Dhaka, Bangladesh",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "Standard Bank Limited"
+  },
+  {
+    "value": "Standard Chartered Bank",
+    "label": "SCB",
+    "Type": "Foreign Commercial Banks",
+    "Founded": "29 December 1853",
+    "Founder": "James Wilson",
+    "Headquarters": "London, England, UK",
+    "Website": "www.sc.com"
+  },
+  {
+    "value": "State Bank of India",
+    "label": "SBOI",
+    "Type": "Foreign Commercial Banks",
+    "Founded": "2 June 1806",
+    "Headquarters": "State Bank Bhawan, M.C. Road, Nariman Point, Mumbai, Maharashtra, India",
+    "Website": "bank.sbi"
+  },
+  {
+    "value": "The City Bank Ltd.",
+    "label": "TCBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "28 March 1983",
+    "Founder": "Mr. Monowar Ali, Mr. Ibrahim Mia (Late), Mr. Abdul Hadi (Late), Mr. M.A. Hashem (Late), Mr. Anwar Hossain, Mr. Abdul Barik Choudhury (Late), Mr. Deen Mohammad, Mr. A.B.M. Feroz, Mr. Md. Ali Hossain, Mr. Azizul Haque Chowdhury, Mr. N.A. Chowdhury (Late)",
+    "Headquarters": "136 Gulshan Avenue, Circle 2, Gulshan, Dhaka, Bangladesh",
+    "Website": "thecitybank.com"
+  },
+  {
+    "value": "Trust Bank Ltd.",
+    "label": "TBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "1999",
+    "Headquarters": "Shadhinota Tower, Bir Srestha Shahid Jahangir Gate, Dhaka Cantonment, Dhaka, Bangladesh",
+    "Website": "www.tblbd.com"
+  },
+  {
+    "value": "Union Bank Ltd.",
+    "label": "UBL",
+    "Type": "Private Commercial Banks",
+    "Website": "https://www.unionbank.com.bd/"
+  },
+  {
+    "value": "United Commercial Bank Ltd.",
+    "label": "UCBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "",
+    "Founder": "Akhtaruzzaman Chowdhury Babu",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.ucb.com.bd"
+  },
+  {
+    "value": "Uttara Bank Ltd.",
+    "label": "UBL",
+    "Type": "Private Commercial Banks",
+    "Founded": "Dhaka, Bangladesh (1965)",
+    "Headquarters": "Dhaka, Bangladesh",
+    "Website": "www.uttarabank-bd.com"
+  },
+  {
+    "value": "Woori Bank Ltd.",
+    "label": "WBL",
+    "Type": "Foreign Commercial Banks",
+    "Founded": "30 January 1899",
+    "Headquarters": "Hoehyeon-dong, Jung-gu, Seoul, South Korea",
+    "Website": "www.wooribank.com"
+  }
+]
