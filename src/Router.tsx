@@ -27,6 +27,7 @@ export default function Router() {
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route>
           <Route path="/" element={<Navigator />}>
+            <Route index element={menusList[0].elem} />
             {menusList.map((menu, i) => (
               <Route path={menu.slug} element={menu.elem} key={i} />
             ))}
