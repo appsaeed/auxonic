@@ -1,4 +1,3 @@
-import settings from "./app/settings";
 import { Children } from "./types/global";
 import IconsViews from "./views/dashboard/IconsViews";
 import Iploockup from "./views/dashboard/Iploockup";
@@ -46,15 +45,12 @@ const menus: MenuType = [
     slug: "url-shortener",
     elem: <URLShortener />,
   },
-];
-
-if (settings.dev) {
-  menus.push({
+  {
     name: "Icons",
     icon: <i className="mdi mdi-emoticon"></i>,
     slug: "icons",
     elem: <IconsViews />,
-  });
-}
+  },
+];
 
 export default menus;

@@ -1,40 +1,74 @@
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-import { useMemo, useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { JSX } from "preact/jsx-runtime";
 import { DotProgress } from "../../components/spinner/Spinner";
 import { Children } from "../../types/global";
 import { copyToClipboard } from "../../utils/clipboard";
-import icons from "../data/data.json";
+import iconList from "../data/icons.json";
 import Content from "../layout/Content";
 
 export default function IconsViews() {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
-  const [data, setData] = useState<JSX.Element[] | JSX.Element>([]);
+  const [icons, setIcons] = useState<string[]>([]);
 
-  useMemo(() => {
-    const keyword = search.toString().toLowerCase().trim();
-    if (keyword !== "" && keyword.length >= 2) {
-      setLoading(true);
+  useEffect(() => {
+    let timer: any;
+    const _key = String(search).toLowerCase().trim();
 
-      //search data
-      const find = icons.data.filter((value) => value.includes(search));
-
-      const list: JSX.Element[] = find.map((icon, i) => {
-        return <Icon icon={icon} key={i} />;
+    function searchIcons(data: string[], key: string): Promise<string[]> {
+      return new Promise((resolve, reject) => {
+        try {
+          timer = setTimeout(() => {
+            const find = data.filter((item) => item.includes(key));
+            resolve(find);
+          }, 100);
+        } catch (error) {
+          reject([]);
+        }
       });
-      setData(list);
-      setLoading(false);
-    } else {
-      setData([]);
+    }
+
+    if (_key && _key.length > 1) {
+      setLoading(true);
+      searchIcons(iconList, _key)
+        .then((items) => setIcons(items))
+        .catch(() => setLoading(false))
+        .finally(() => setLoading(false));
     }
   }, [search]);
 
+  function PageTitle() {
+    return (
+      <>
+        Search Material Icons easily and faster copy to clipboard| download
+        material or use the
+        <a
+          href="https://github.com/appsaeed/auxonic/blob/main/src/assets/css/custom-fonts.css"
+          target="_blank"
+        >
+          {" "}
+          repository css
+        </a>
+      </>
+    );
+  }
+
   return (
-    <Content>
+    <Content title={"Quickly Search and Copy Material Icons to Clipboard"}>
       <div className="col-md-12">
+        <h4 class="mb-4">
+          Download or Import Fonts from Official Repository via{" "}
+          <a
+            href="https://github.com/appsaeed/auxonic/blob/main/src/assets/css/custom-fonts.css"
+            target="_blank"
+          >
+            {" "}
+            CSS Instructions
+          </a>
+        </h4>
         <div className="card">
           <div className="border-bottom title-part-padding">
             <h4 className="mb-0">
@@ -60,7 +94,10 @@ export default function IconsViews() {
           </div>
           <div className="card-body px-2">
             {loading && <DotProgress />}
-            {data}
+            {/* {data} */}
+            {icons.map((icon, i) => {
+              return <Icon key={i} icon={icon} />;
+            })}
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ export default function Content({
   title,
   children,
 }: {
-  title?: string;
+  title?: Children;
   children: Children;
 }) {
   return (
