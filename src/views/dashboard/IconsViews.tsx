@@ -1,8 +1,10 @@
-import { ReactNode, useMemo, useState } from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
+import { useMemo, useState } from "preact/hooks";
+import { JSX } from "preact/jsx-runtime";
 import { DotProgress } from "../../components/spinner/Spinner";
+import { Children } from "../../types/global";
 import { copyToClipboard } from "../../utils/clipboard";
 import icons from "../data/data.json";
 import Content from "../layout/Content";
@@ -39,7 +41,7 @@ export default function IconsViews() {
               <div className="icon-card-title row">
                 <div className="col">
                   <input
-                    onChange={(e) => setSearch(e.target.value)}
+                    onChange={(e) => setSearch(e.currentTarget.value)}
                     type="text"
                     placeholder="Search icon"
                     className="form-control"
@@ -66,10 +68,7 @@ export default function IconsViews() {
   );
 }
 
-type IconProps = React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLSpanElement>,
-  HTMLSpanElement
-> & {
+type IconProps = JSX.HTMLAttributes<HTMLElement> & {
   icon: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   args?: any;
@@ -79,7 +78,7 @@ const Icon = ({ icon, ...args }: IconProps) => {
   type TagnaeProps = {
     name?: string;
     className?: string;
-    children?: ReactNode;
+    children?: Children;
   };
   const mySwal = withReactContent(Swal);
   const Tagname = ({ name, className, children }: TagnaeProps) => {

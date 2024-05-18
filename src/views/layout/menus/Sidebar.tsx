@@ -1,6 +1,6 @@
 import menus from "../../../menus";
 
-import { useEffect } from "react";
+import { useEffect } from "preact/hooks";
 import { Outlet, useLocation } from "react-router-dom";
 import { jqueryMenu } from "../../../app/CustomScript";
 import { getTitleByPath } from "../../../app/functions";

@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
 import settings from "./app/settings";
+import { Children } from "./types/global";
 import IconsViews from "./views/dashboard/IconsViews";
 import Iploockup from "./views/dashboard/Iploockup";
 import RGBtohex from "./views/dashboard/RGBtohex";
@@ -8,15 +8,15 @@ import URLShortener from "./views/dashboard/URLShortener";
 
 type MenuItemType = {
   name: string;
-  icon: ReactNode;
+  icon: Children;
   slug: string;
-  elem: ReactNode;
+  elem: Children;
   gaps?: boolean;
   submenu?: Array<{
     name: string;
-    icon: ReactNode;
+    icon: Children;
     slug: string;
-    elem: ReactNode;
+    elem: Children;
   }>;
 };
 

@@ -1,5 +1,5 @@
 //apps and root import
-import { useState } from "react";
+import { useState } from "preact/hooks";
 import { toast } from "react-toastify";
 import { copyToClipboard } from "../../utils/clipboard";
 import { rgbToHex } from "../../utils/convert";
@@ -30,7 +30,7 @@ export default function RGBtohex() {
                     className="form-control py-1"
                     placeholder="Enter red"
                     value={red}
-                    onChange={(e) => setRed(e.target.value)}
+                    onChange={(e) => setRed(e.currentTarget.value)}
                   />
                 </div>
                 <div className="col">
@@ -41,7 +41,7 @@ export default function RGBtohex() {
                     className="form-control py-1"
                     placeholder="Enter green"
                     value={green}
-                    onChange={(e) => setGreen(e.target.value)}
+                    onChange={(e) => setGreen(e.currentTarget.value)}
                   />
                 </div>
                 <div className="col">
@@ -52,7 +52,7 @@ export default function RGBtohex() {
                     className="form-control py-1"
                     placeholder="Enter blue"
                     value={blue}
-                    onChange={(e) => setBlue(e.target.value)}
+                    onChange={(e) => setBlue(e.currentTarget.value)}
                   />
                 </div>
               </div>
@@ -78,14 +78,14 @@ export default function RGBtohex() {
                     name="hex"
                     className="form-control w-50 me-2"
                     value={hex}
-                    onChange={(e) => setHex(e.target.value)}
+                    onChange={(e) => setHex(e.currentTarget.value)}
                   />
                   <input
                     type="color"
                     name="color"
                     className="form-control  me-2 h-auto"
                     value={hex}
-                    onChange={(e) => setHex(e.target.value)}
+                    onChange={(e) => setHex(e.currentTarget.value)}
                   />
                   <i
                     onClick={(e) => {

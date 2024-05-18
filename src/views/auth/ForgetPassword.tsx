@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "preact/hooks";
 import { toast } from "react-toastify";
 import { FormBody } from "../../components/FormBody";
 import Input from "../../components/Input";
@@ -32,7 +32,7 @@ export default function ForgetPassword() {
             type="email"
             label="Your Email"
             error="Enter a valid email address"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.currentTarget.value)}
             value={email}
             required={mailError}
           />

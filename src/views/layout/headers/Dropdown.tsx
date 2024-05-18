@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
+import { Children } from "../../../types/global";
 
 type Props = {
   title: string;
   count: number;
-  icon: ReactNode;
-  children: ReactNode;
+  icon: Children;
+  children: Children;
 };
 export default function Dropdown({ title, count, icon, children }: Props) {
   return (

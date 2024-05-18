@@ -1,4 +1,6 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import { createContext } from "preact";
+import { useContext, useState } from "preact/hooks";
+import { Children } from "../types/global";
 import {
   BoxLayout,
   HeaderPosition,
@@ -38,7 +40,7 @@ export function usePreference(): PreferenceProps {
   return useContext(PreferenceContext);
 }
 
-export default function Preference({ children }: { children: ReactNode }) {
+export default function Preference({ children }: { children: Children }) {
   const [theme, switchTheme] = useState<ThemeType>(initialState.theme);
   const [themeSkin, setThemeSkin] = useState<TSkins>(initialState.themeSkin);
   const [boxLayout, setBoxLayout] = useState<BoxLayout>(initialState.boxLayout);

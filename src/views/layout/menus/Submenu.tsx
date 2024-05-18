@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { Children } from "../../../types/global";
 
 type Props = {
   name: string;
-  icon: ReactNode;
+  icon: Children;
   url: string;
 };
 

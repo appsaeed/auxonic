@@ -1,5 +1,7 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext } from "preact";
+import { useContext, useState } from "preact/hooks";
 import { AuthProps, AuthType, UserProps } from "../types/auth";
+import { Children } from "../types/global";
 import {
   getAuthType,
   getUserCooke,
@@ -22,7 +24,7 @@ export function useAuth(): AuthProps {
   return useContext(AuthContext);
 }
 
-export default function AuthProvider({ children }: { children: ReactNode }) {
+export default function AuthProvider({ children }: { children: Children }) {
   const [user, setUser] = useState<UserProps>(getUserCooke());
   const [authType, setAuthType] = useState<AuthType>(getAuthType());
   const [isLogin, setIsLogin] = useState<boolean>(isAuthenticated());

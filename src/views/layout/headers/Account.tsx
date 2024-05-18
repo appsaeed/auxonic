@@ -1,11 +1,12 @@
-import { ReactNode } from "react";
 import * as Fa from "react-feather";
 import { useAuth } from "../../../context/AuthContext";
 import { UserProps } from "../../../types/auth";
+import { HtmlSpanType } from "../../../types/dom";
+import { Children } from "../../../types/global";
 import GuestMenu from "./GuestMenu";
 
 type AccountItesProps = {
-  icon?: ReactNode;
+  icon?: Children;
   name?: string;
   message?: string;
   classes?: string;
@@ -211,14 +212,11 @@ const AccountPopup = ({
   );
 };
 
-type AccountBottomProps = React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLSpanElement>,
-  HTMLSpanElement
-> & {
+type AccountBottomProps = HtmlSpanType & {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   rest?: any;
   color: string;
-  children: ReactNode;
+  children: Children;
 };
 const AccoountBottomItem = ({
   color,

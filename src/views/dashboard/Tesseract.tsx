@@ -1,8 +1,9 @@
 //apps and root import
-import { useState } from "react";
 import Content from "../layout/Content";
 
 //hooks
+import { useState } from "preact/hooks";
+import { JSX } from "preact/jsx-runtime";
 import { toast } from "react-toastify";
 import Tesseract from "tesseract.js";
 import { DotProgress } from "../../components/spinner/Spinner";
@@ -18,10 +19,10 @@ export default function Tesseracts() {
     toast.error(error);
   }
 
-  const imageTotext = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const imageTotext = (e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
     setLoading(true);
     setError(null);
-    const Files = e.target.files as FileList;
+    const Files = e.currentTarget.files as FileList;
     Tesseract.recognize(URL.createObjectURL(Files?.[0]), lang)
       .then(({ data: { text } }) => {
         setLoading(false);
@@ -60,7 +61,7 @@ export default function Tesseracts() {
               <div className="row">
                 <div className="col">
                   <input
-                    onChange={(e) => setUrl(e.target.value)}
+                    onChange={(e) => setUrl(e.currentTarget.value)}
                     type="url"
                     placeholder="Enter url"
                     className="form-control"
@@ -79,7 +80,7 @@ export default function Tesseracts() {
                 <div className="col">
                   <select
                     className="form-select w-100"
-                    onChange={(e) => setLang(e.target.value)}
+                    onChange={(e) => setLang(e.currentTarget.value)}
                     defaultValue={"eng"}
                   >
                     <option value="eng">English</option>
@@ -95,7 +96,7 @@ export default function Tesseracts() {
                       type="file"
                       accept="image/*"
                       className="w-100"
-                      onChange={imageTotext}
+                      onChange={(e) => imageTotext(e)}
                     />
                     upload
                   </div>
@@ -110,7 +111,8 @@ export default function Tesseracts() {
               <div
                 className="p-4 fs-6"
                 contentEditable
-                suppressContentEditableWarning={true}
+
+                // suppressContentEditableWarning={true}
               >
                 <pre>{content}</pre>
               </div>

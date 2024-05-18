@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
 import { HtmldivType } from "../../types/dom";
+import { Children } from "../../types/global";
 import css from "./css/Loader.module.css";
 
 type LoadersProps = HtmldivType & {
   className?: string;
-  children?: ReactNode;
+  children?: Children;
 };
 
 export default function Loaders({

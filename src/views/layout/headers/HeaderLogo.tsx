@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import settings from "../../../app/settings";
+import { Children } from "../../../types/global";
 
-export default function HeaderLogo({ children }: { children?: ReactNode }) {
+export default function HeaderLogo({ children }: { children?: Children }) {
   return (
     <Link className="navbar-brand" to="/">
       {/* <b className="logo-icon">
