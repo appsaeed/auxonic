@@ -48,7 +48,7 @@ export const Index = () => {
 /**
  * Reader React component
  */
-const rootdiv = import.meta.env.VITE_ROOTDIV || "%VITE_ROOTDIV%";
+const rootdiv = import.meta.env.VITE_MAIN_DOM || "%VITE_MAIN_DOM%";
 //main element selector
 const element = document.getElementById(rootdiv) as HTMLElement;
 //component renderer

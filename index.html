@@ -30,21 +30,10 @@
       sizes="16x16"
       href="/icons/favicon-16x16.png"
     />
-    <script id="%VITE_DATADIV%" type="appliction/json">
-      {
-        "url": "%BASE_URL%",
-        "name": "%VITE_NAME%",
-        "title": "%VITE_TITLE%",
-        "logo": "%VITE_LOGO%",
-        "desc": "%VITE_DESCRIPTION%",
-        "favicon": "%VITE_FAVICON%",
-        "basename": "%VITE_BASEPATH%"
-      }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-    <div id="%VITE_ROOTDIV%"></div>
+    <div id="%VITE_MAIN_DOM%"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

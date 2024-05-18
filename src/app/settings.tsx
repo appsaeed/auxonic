@@ -1,23 +1,7 @@
-interface SettingsTypes {
-  dev: boolean;
-  url: string;
-  name: string;
-  title: string;
-  lang: string;
-  logo: string | null;
-  desc: string;
-  favicon: string | null;
-  basename: string;
-  auth_session: string;
-}
-
-import { unslash } from "../utils/url";
-import data from "./settingJson";
-
-const __url =
-  window.location.protocol + "//" + window.location.host + "/" + data.basename;
-
-const settings: SettingsTypes = {
+import { baseURL } from "utilies";
+import logo from "../../public/icons/favicon-32x32.png";
+import favicon from "../../public/icons/favicon.ico";
+export default {
   /**
    * app local
    */
@@ -25,46 +9,45 @@ const settings: SettingsTypes = {
   /**
    * app url
    */
-  url: unslash(__url),
+  url: baseURL(import.meta.env.VITE_BASENAME || ""),
   /**
    * name
    */
-  name: data?.name || "name",
+  name: import.meta.env.VITE_NAME || "name",
 
   /**
    * title
    */
-  title: data?.title || "title",
+  title: import.meta.env.VITE_TITLE || "title",
 
   /**
    * app logo
    */
-  logo: data.logo || "",
+  logo,
 
   /**
    * app lang
    */
-  lang: data?.lang || "en-US",
+  lang: import.meta.env.VITE_LANG || "en-US",
 
   /**
    * app description
    */
-  desc: data?.desc || "",
+  desc: import.meta.env.VITE_DESCRIPTION || "",
 
   /**
    * app favicon
    */
-  favicon: data?.favicon || "",
+  favicon: favicon || "",
 
   /**
    * app base route
    */
 
-  basename: data?.basename || "",
+  basename: import.meta.env.VITE_BASENAME || "",
 
   /**
    * app stroage name
    */
   auth_session: import.meta.env.VITE_AUTH_SESSTION || "authSession",
 };
-export default settings;

@@ -7,7 +7,7 @@ import { VitePWA, VitePWAOptions } from "vite-plugin-pwa";
 const env = Object.assign(process.env, loadEnv("mock", process.cwd(), ""));
 
 //basepath
-const basepath = env.VITE_BASEPATH;
+const basepath = env.VITE_BASENAME;
 const iconpath = basepath.replace(/\/$/, "");
 
 //vite pwa config

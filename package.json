@@ -20,7 +20,8 @@
     "sweetalert2": "^11.7.12",
     "sweetalert2-react-content": "^5.0.7",
     "tesseract.js": "^4.1.1",
-    "universal-cookie": "^4.0.4"
+    "universal-cookie": "^4.0.4",
+    "utilies": "^1.0.19"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.5.0",
