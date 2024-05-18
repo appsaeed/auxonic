@@ -38,23 +38,11 @@ export default function IconsViews() {
         .catch(() => setLoading(false))
         .finally(() => setLoading(false));
     }
-  }, [search]);
 
-  function PageTitle() {
-    return (
-      <>
-        Search Material Icons easily and faster copy to clipboard| download
-        material or use the
-        <a
-          href="https://github.com/appsaeed/auxonic/blob/main/src/assets/css/custom-fonts.css"
-          target="_blank"
-        >
-          {" "}
-          repository css
-        </a>
-      </>
-    );
-  }
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [search]);
 
   return (
     <Content title={"Quickly Search and Copy Material Icons to Clipboard"}>
