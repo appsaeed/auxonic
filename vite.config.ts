@@ -18,7 +18,7 @@ const pwaConfig: Partial<VitePWAOptions> = {
     sourcemap: true,
   },
   manifest: {
-    name: env.VITE_DESCRIPTION || "Ftools",
+    name: env.VITE_TITLE || "Ftools",
     short_name: env.VITE_NAME || "FTools",
     theme_color: "#1976d2",
     background_color: env.VITE_THTEM_COLOR || "#fafafa",
